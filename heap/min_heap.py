@@ -35,7 +35,10 @@ class MinHeap:
         return val
 
     def add(self, value):
-        self.ar.append(value)
+        if self.n == len(self.ar):
+            self.ar.append(value)
+        else:
+            self.ar[self.n] = value
         i = self.n
         self.n += 1
 
